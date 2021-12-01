@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Fasores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+
+        <!-- HEADER -->
+        <h2>Calculadora de Fasores</h2>
+        <h5>Disciplina: Circuitos Eléctricos R</h5>
+        <h5>Intituto Politécnico. Universidade do Estado de Rio de Janeiro</h5>
+
+        <!-- BASE -->
+        <div>
+            <label for="base">Base: </label>
+            <select id="base">
+                <option value="retangular">Retangular</option>
+                <option value="polar">Polar</option>
+            </select>
+        </div>
+
+        <!-- CONVERSOR -->
+        <h4>Conversor:</h4>
+        <div id="conversor-container" class="retangular">
+            <input id="c-rect-re" type="text">
+            &#43
+            j <input id="c-rect-im" type="text">
+        </div>
+        <div id="conversor-container" class="polar">
+            <input id="c-polar-len" type="text">
+            &#60
+            <input id="c-polar-deg" type="text"> &#176
+        </div>
+        <button id="convertir">Transformar</button>
+
+        <!-- CALCULADORA -->
+        <h4>Calculadora:</h4>
+        <div id="retangular-container" class="retangular">
+            <input id="n1-rect-re" type="text">
+            &#43
+            j <input id="n1-rect-im" type="text">
+            <select id="op-rect">
+                <option value="plus">&#43</option>
+                <option value="minus">&#45</option>
+                <option value="multiplication">&#42</option>
+                <option value="division">&#47</option>
+            </select>
+            <input id="n2-rect-re" type="text">
+            &#43
+            j <input id="n2-rect-im" type="text">
+        </div>
+
+        <div id="polar-container" class="polar">
+            <input id="n1-polar-len" type="text">
+            &#60
+            <input id="n1-polar-deg" type="text"> &#176
+            <select id="op-polar">
+                <option value="plus">&#43</option>
+                <option value="minus">&#45</option>
+                <option value="multiplication">&#42</option>
+                <option value="division">&#47</option>
+            </select>
+            <input id="n2-polar-len" type="text">
+            &#60
+            <input id="n2-polar-deg" type="text"> &#176
+        </div>
+
+        <button id="calculate">Calcular</button>
+
+        <!-- REGISTRO -->
+        <h4>Registro:</h4>
+        <button id="limpar">Limpar</button>
+        <div id="registro"></div>
+
+    </main>
+
+
+
+    <!-- CUSTOM JS -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
