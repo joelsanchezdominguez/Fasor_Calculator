@@ -64,6 +64,10 @@ function conv(n1, n2, base) {
     if (base == 'retangular') {
         let len = Math.sqrt(n1*n1 + n2*n2);
         let deg = Math.atan(n2/n1) * 180 / Math.PI;
+        if (n1 > 0 && n2 > 0) deg = deg + 0;
+        else if (n1 < 0 && n2 > 0) deg = deg + 90;
+        else if (n1 < 0 && n2 < 0) deg = deg + 180;
+        else if (n1 > 0 && n2 < 0) deg = deg + 270;
         let polar = new Polar(len, deg);
         return polar;
     }
