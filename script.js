@@ -84,12 +84,12 @@ function printConv(re, im, len, deg, base) {
     const registro = document.getElementById("registro");
     if (base == "polar"){
         const result = document.createElement("div");
-        result.innerHTML = `${re.toFixed(5)} + j${im.toFixed(5)} = ${len.toFixed(5)} &#60 ${deg.toFixed(0)} &#176`;
+        result.innerHTML = `${re.toFixed(4)} + j${im.toFixed(4)} = ${len.toFixed(4)} &#60 ${deg.toFixed(2)} &#176`;
         registro.prepend(result);
     }
     else {
         const result = document.createElement("div");
-        result.innerHTML = `${len.toFixed(5)} &#60 ${deg.toFixed(0)} &#176 = ${re.toFixed(5)} + j${im.toFixed(5)}`;
+        result.innerHTML = `${len.toFixed(4)} &#60 ${deg.toFixed(2)} &#176 = ${re.toFixed(4)} + j${im.toFixed(4)}`;
         registro.prepend(result);
     }
     
@@ -189,32 +189,32 @@ function displayResults(n1, n2, r, base, op) {
     if (base == "retangular") {
         const result = document.createElement("div");
         if (op == "plus"){
-            result.innerHTML = `(${n1.re.toFixed(5)} + j${n1.im.toFixed(5)}) &#43 (${n2.re.toFixed(5)} + j${n2.im.toFixed(5)}) = ${r.re.toFixed(5)} + j${r.im.toFixed(5)}`;
+            result.innerHTML = `(${n1.re.toFixed(4)} + j${n1.im.toFixed(4)}) &#43 (${n2.re.toFixed(4)} + j${n2.im.toFixed(4)}) = ${r.re.toFixed(4)} + j${r.im.toFixed(4)}`;
         }
         else if (op == "minus"){
-            result.innerHTML = `(${n1.re.toFixed(5)} + j${n1.im.toFixed(5)}) &#45 (${n2.re.toFixed(5)} + j${n2.im.toFixed(5)}) = ${r.re.toFixed(5)} + j${r.im.toFixed(5)}`;
+            result.innerHTML = `(${n1.re.toFixed(4)} + j${n1.im.toFixed(4)}) &#45 (${n2.re.toFixed(4)} + j${n2.im.toFixed(4)}) = ${r.re.toFixed(4)} + j${r.im.toFixed(4)}`;
         }
         else if (op == "multiplication"){
-            result.innerHTML = `(${n1.re.toFixed(5)} + j${n1.im.toFixed(5)}) &#42 (${n2.re.toFixed(5)} + j${n2.im.toFixed(5)}) = ${r.re.toFixed(5)} + j${r.im.toFixed(5)}`;
+            result.innerHTML = `(${n1.re.toFixed(4)} + j${n1.im.toFixed(4)}) &#42 (${n2.re.toFixed(4)} + j${n2.im.toFixed(4)}) = ${r.re.toFixed(4)} + j${r.im.toFixed(4)}`;
         }
         else if (op == "division"){
-            result.innerHTML = `(${n1.re.toFixed(5)} + j${n1.im.toFixed(5)}) &#47 (${n2.re.toFixed(5)} + j${n2.im.toFixed(5)}) = ${r.re.toFixed(5)} + j${r.im.toFixed(5)}`;
+            result.innerHTML = `(${n1.re.toFixed(4)} + j${n1.im.toFixed(4)}) &#47 (${n2.re.toFixed(4)} + j${n2.im.toFixed(4)}) = ${r.re.toFixed(4)} + j${r.im.toFixed(4)}`;
         }
         registro.prepend(result);
     }
     else {
         const result = document.createElement("div");
         if (op == "plus"){
-            result.innerHTML = `(${n1.len.toFixed(5)} &#60 ${n1.deg.toFixed(0)})&#176 &#43 (${n2.len.toFixed(5)} &#60 ${n2.deg.toFixed(0)}&#176) = ${r.len.toFixed(5)} &#60 ${r.deg.toFixed(0)}&#176`;
+            result.innerHTML = `(${n1.len.toFixed(4)} &#60 ${n1.deg.toFixed(2)})&#176 &#43 (${n2.len.toFixed(4)} &#60 ${n2.deg.toFixed(2)}&#176) = ${r.len.toFixed(4)} &#60 ${r.deg.toFixed(2)}&#176`;
         }
         else if (op == "minus"){
-            result.innerHTML = `(${n1.len.toFixed(5)} &#60 ${n1.deg.toFixed(0)})&#176 &#45 (${n2.len.toFixed(5)} &#60 ${n2.deg.toFixed(0)}&#176) = ${r.len.toFixed(5)} &#60 ${r.deg.toFixed(0)}&#176`;
+            result.innerHTML = `(${n1.len.toFixed(4)} &#60 ${n1.deg.toFixed(2)})&#176 &#45 (${n2.len.toFixed(4)} &#60 ${n2.deg.toFixed(2)}&#176) = ${r.len.toFixed(4)} &#60 ${r.deg.toFixed(2)}&#176`;
         }
         else if (op == "multiplication"){
-            result.innerHTML = `(${n1.len.toFixed(5)} &#60 ${n1.deg.toFixed(0)})&#176 &#42 (${n2.len.toFixed(5)} &#60 ${n2.deg.toFixed(0)}&#176) = ${r.len.toFixed(5)} &#60 ${r.deg.toFixed(0)}&#176`;
+            result.innerHTML = `(${n1.len.toFixed(4)} &#60 ${n1.deg.toFixed(2)})&#176 &#42 (${n2.len.toFixed(4)} &#60 ${n2.deg.toFixed(2)}&#176) = ${r.len.toFixed(4)} &#60 ${r.deg.toFixed(2)}&#176`;
         }
         else if (op == "division"){
-            result.innerHTML = `(${n1.len.toFixed(5)} &#60 ${n1.deg.toFixed(0)})&#176 &#47 (${n2.len.toFixed(5)} &#60 ${n2.deg.toFixed(0)}&#176) = ${r.len.toFixed(5)} &#60 ${r.deg.toFixed(0)}&#176`;
+            result.innerHTML = `(${n1.len.toFixed(4)} &#60 ${n1.deg.toFixed(2)})&#176 &#47 (${n2.len.toFixed(4)} &#60 ${n2.deg.toFixed(2)}&#176) = ${r.len.toFixed(4)} &#60 ${r.deg.toFixed(2)}&#176`;
         }
         registro.prepend(result);
     }
